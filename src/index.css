@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.bg-grid {
+  background-color: #0d0d0d; /* dark base background */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.bg-radial {
+    
+  background-color: #0a0f19;
+  background-image: radial-gradient(#1f2c3a 1px, transparent 1px);
+  background-size: 20px 20px;
+      
+}
