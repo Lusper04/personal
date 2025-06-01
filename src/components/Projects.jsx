@@ -25,7 +25,7 @@ const projects = [
     Repo: (
       <div className="flex flex-col items-center gap-2">
         <label className="border px-2 p-1 rounded-xl mt-2 text-[#009966] font-medium">public</label>
-        <a href="#/">
+        <a href="https://github.com/Lusper04/personal.git">
           <img src={GT} className="mt-2 border rounded-full h-[4vh] hover:bg-[#009966]" />
         </a>
       </div>
@@ -49,7 +49,7 @@ const projects = [
     Repo: (
       <div className="flex flex-col items-center gap-2">
         <label className="border px-2 p-1 rounded-xl mt-2 text-[#009966] font-medium">public</label>
-        <a href="#/">
+        <a href="https://github.com/Lusper04/personal.git">
           <img src={GT} className="mt-2 border rounded-full h-[4vh] hover:bg-[#009966]" />
         </a>
       </div>
@@ -73,7 +73,7 @@ const projects = [
     Repo: (
       <div className="flex flex-col items-center gap-2">
         <label className="border px-2 p-1 rounded-xl mt-2 text-[#009966] font-medium">public</label>
-        <a href="#/">
+        <a href="https://github.com/Lusper04/personal.git">
           <img src={GT} className="mt-2 border rounded-full h-[4vh] hover:bg-[#009966]" />
         </a>
       </div>
@@ -97,7 +97,7 @@ const projects = [
     Repo: (
       <div className="flex flex-col items-center gap-2">
         <label className="border px-2 p-1 rounded-xl mt-2 text-[#009966] font-medium">public</label>
-        <a href="#/">
+        <a href="https://github.com/Lusper04/personal.git">
           <img src={GT} className="mt-2 border rounded-full h-[4vh] hover:bg-[#009966]" />
         </a>
       </div>
@@ -113,19 +113,19 @@ export default function Projects() {
 
   return (
     <section className="min-h-screen px-4 mt-30 relative">
-      <h2 id="Projects" className="md:text-4xl text-2xl text-neutral-50 font-semibold mb-20 text-center">
+      <h2 id="Projects" className="md:text-4xl text-2xl text-neutral-50 font-semibold md:mb-20 mb-8 text-center">
         My Recent Projects
       </h2>
 
-      <div className="w-full flex justify-center items-center relative">
+      <div className="md:w-full flex justify-center items-center relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={projects[current].id}
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 15 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
+            exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-lg shadow-xl w-full max-w-lg p-7 text-neutral-50 font-sans shadow-xl border border-white/50"
+            className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-lg shadow-xl md:w-full max-w-lg p-7 text-neutral-50 font-sans shadow-xl border-t border-b border-white/50"
           >
             <div>{projects[current].logo}</div>
             <h3 className="text-md font-semibold mb-2 text-center mt-4">{projects[current].title}</h3>
@@ -135,7 +135,7 @@ export default function Projects() {
         </AnimatePresence>
       </div>
 
-      <div className="flex justify-center mt-12 gap-8">
+      <div className="flex justify-center mt-15 gap-8">
         <button onClick={prev} className="p-3 bg-[#00B578] rounded-lg hover:bg-[#009966] text-neutral-50">
           Prev
         </button>

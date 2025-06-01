@@ -26,8 +26,8 @@ import PN from "/src/assets/images/planning.png"
 
 export default function Skills() {
   return (
-    <section className="bg-radial md:min-h-[125vh] h-full transform-none px-4 mt-80 bg-white/[0.02]">
-      <section id="Skills" className="md:text-4xl text-3xl text-neutral-50 font-semibold mb-12 text-center pt-18">
+    <section className="bg-radial md:min-h-[125vh] h-full transform-none px-4 md:mt-80 mt-30">
+      <section id="Skills" className="md:text-4xl text-3xl text-neutral-50 font-semibold mb-12 text-center md:pt-18 pt-10">
         Skills
       </section>
       <div className="flex flex-col items-center">
@@ -89,9 +89,9 @@ export default function Skills() {
 
             
             <SkillCard title="Nontechnical Skills">
-              <SkillItem icon={PN} label="Planning" tall />
-              <SkillItem icon={COLL} label="Collaboration" tall />
-              <SkillItem icon={PB} label="Problem Solving" tall />
+              <SkillItem icon={PN} label="Planning" />
+              <SkillItem icon={COLL} label="Collaboration"/>
+              <SkillItem icon={PB} label="Problem Solving" />
             </SkillCard>
           </div>
         </motion.div>
@@ -103,7 +103,7 @@ export default function Skills() {
 
 function SkillCard({ title, children }) {
   return (
-    <div className="w-[90vw] md:w-[60vh] bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-xl shadow-xl mt-6 font-sans mx-auto">
+    <div className="w-[90vw] md:w-[60vh] bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-t border-b rounded-xl shadow-xl mt-6 font-sans mx-auto">
       <section className="text-neutral-50 px-5 mb-5">
         <h1 className="font-semibold text-xl text-center pt-6">{title}</h1>
         <div className="flex justify-center flex-wrap gap-8 py-8">
@@ -117,7 +117,7 @@ function SkillCard({ title, children }) {
 function SkillItem({ icon, label, tall = false }) {
   return (
     <div className="flex flex-col items-center">
-      <img src={icon} alt="icon" className={`h-[${tall ? "10vh" : "7vh"}]`} />
+      <img src={icon} alt="icon" className={`h-[${tall ? "10vh" : "6vh"}]`} />
       <p className="text-neutral-50 text-sm mt-1 text-center">{label}</p>
     </div>
   );

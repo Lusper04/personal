@@ -8,17 +8,17 @@ import TF from "/src/assets/images/terraform.svg";
 import OS from "/src/assets/images/oracle.png";
 import PS from "/src/assets/images/postgre.png";
 import PT from "/src/assets/images/python.png";
-import OK from "/src/assets/images/orchestrate.png";
 import DK from "/src/assets/images/docker.png";
 import SQ from "/src/assets/images/mysql.png";
 import LX from "/src/assets/images/linux.png";
+import AWS from "/src/assets/images/aws.png";
 
 export default function Services() {
   return (
-    <section className="bg-radial h-[125vh] transform-none px-4 mt-80 bg-white/[0.02]">
+    <section className="bg-radial h-fit transform-none px-4 mt-80 bg-white/[0.02]">
       <section
         id="Services"
-        className="md:text-4xl text-2xl text-neutral-50 font-semibold mb-12 text-center pt-18"
+        className="md:text-4xl text-2xl text-neutral-50 font-semibold md:mb-12 text-center md:pt-18 pt-10"
       >
         Services
       </section>
@@ -36,23 +36,23 @@ export default function Services() {
         >
           <div className="flex flex-col">
             <div className="flex flex-col md:flex-row">
-              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-xl shadow-xl md:mr-12 w-full md:w-[92vh] mt-6">
+              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-t border-b rounded-xl shadow-xl md:mr-12 w-full md:w-[92vh] mt-6">
                 <section className="text-neutral-50 font-sans px-5 mb-5 items-start">
                   <div className="flex justify-center py-8 space-x-1">
                     <img
                       src={css}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={react}
                       alt="icon"
-                      className="h-[7vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[7vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={html}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                   </div>
                   <h1 className="text-[3.5vh] font-semibold text-[#00B578] mb-1">
@@ -68,23 +68,23 @@ export default function Services() {
                 </section>
               </div>
 
-              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-xl shadow-xl w-full md:w-[92vh] mt-6">
+              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-t border-b rounded-xl shadow-xl w-full md:w-[92vh] mt-6">
                 <section className="text-neutral-50 font-sans px-5 mb-5 items-start">
                   <div className="flex justify-center py-8 space-x-1">
                     <img
                       src={TS}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={node}
                       alt="icon"
-                      className="h-[7vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[7vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={SQ}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                   </div>
                   <h1 className="text-[3.5vh] font-semibold text-[#00B578] mb-1">
@@ -100,33 +100,33 @@ export default function Services() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row">
-              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-xl shadow-xl md:mr-12 w-full md:w-[92vh] mt-6">
+              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-t border-b rounded-xl shadow-xl md:mr-12 w-full md:w-[92vh] mt-6">
                 <section className="text-neutral-50 font-sans px-5 mb-5 items-start">
                   <div className="flex justify-center py-8 space-x-1 flex-wrap">
                     <img
                       src={DK}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={TF}
                       alt="icon"
-                      className="h-[7vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[7vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
-                      src={OK}
+                      src={AWS}
                       alt="icon"
-                      className="h-[8vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[8vh] border-r border-l border-white/50 bg-white/[0.05] p-2 rounded-full"
                     />
                     <img
                       src={PT}
                       alt="icon"
-                      className="h-[7vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[7vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={LX}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                   </div>
                   <h1 className="text-[3.5vh] font-semibold text-[#00B578] mb-1">
@@ -142,23 +142,23 @@ export default function Services() {
                 </section>
               </div>
 
-              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-xl shadow-xl w-full md:w-[92vh] mt-6">
+              <div className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-t border-b rounded-xl shadow-xl w-full md:w-[92vh] mt-6">
                 <section className="text-neutral-50 font-sans px-5 mb-5 items-start">
                   <div className="flex justify-center py-8 space-x-1">
                     <img
                       src={PS}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={OS}
                       alt="icon"
-                      className="h-[7vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[7vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                     <img
                       src={SQ}
                       alt="icon"
-                      className="h-[6vh] bg-white/[0.09] p-2 rounded-full"
+                      className="h-[6vh] border-r border-l border-white/50 bg-white/[0.09] p-2 rounded-full"
                     />
                   </div>
                   <h1 className="text-[3.5vh] font-semibold text-[#00B578] mb-1">
