@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Hero from "./components/Hero";
-import Contact from "./components/Contact";
+//import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import Services from "./components/Services";
-import Experiences from "./components/Experience";
+//import Experiences from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Education from "./components/Education";
+//import Education from "./components/Education";
 import BackgroundLighting from "./components/Background";
 import { useState } from "react";
 
@@ -38,12 +38,12 @@ const App = () => {
             <div className="bg-grid min-h-screen relative z-10">
               <Nav />
               <Hero />
-              <Education />
+              {/*<Education />*/}
               <Services />
-              <Experiences />
+              {/*<Experiences />*/}
               <Skills />
               <Projects />
-              <Contact />
+              {/*<Contact />*/}
             </div>
           </motion.div>
         </AnimatePresence>
