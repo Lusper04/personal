@@ -6,11 +6,11 @@ const educationData = [
   {
     date: 'Jun 2021-May 2026',
     degree: 'Bachelor of Science in Computer Sciences',
-    school: 'University of Malawi ( UNIMA )',
+    school: 'University of Malawi (UNIMA)',
     location: 'Zomba, Malawi',
   },
   {
-    date: ' Jan 2019 - Jan 2021',
+    date: 'Jan 2019 - Jan 2021',
     degree: 'Malawi School Certificate of Education (MSCE)',
     school: 'Domasi Mission Secondary School (DMX)',
     location: 'Zomba, Malawi',
@@ -19,68 +19,64 @@ const educationData = [
 
 export default function Education() {
   const ref = useRef(null);
-
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-
   
   const height = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
 
   return (
-    <div
-      className="flex flex-col justify-center mt-40 sm:mt-40 education-section px-1 md:px-0 relative"
+    <div 
+      className="flex flex-col justify-center mt-20 md:mt-40 py-10 px-4 sm:px-6 relative"
       ref={ref}
     >
-     
-      <section id="Education" className="text-neutral-50 text-2xl sm:text-[4vh] font-bold text-center">
+      <h2 id="Education" className="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16">
         Education
-      </section>
+      </h2>
 
-     
+      {/* Timeline line - Responsive positioning */}
       <motion.div
-        className="absolute left-[2.4rem] sm:left-[26vh] md:top-[20vh] top-[15vh]  bottom-0 w-[3px] z-0 bg-gradient-to-b from-[#009966] shadow-lg"
-        style={{ height }}
+        className="absolute left-5 sm:left-10 md:left-1/2 top-[28vh] bottom-[2rem] w-0.5 bg-gradient-to-b from-[#009966] shadow-lg z-0"
+        style={{ 
+          height,
+          transform: 'translateX(-50%)'
+        }}
       />
 
-     
-      {educationData.map((edu, index) => (
-        <div
-          key={index}
-          className="flex py-10 md:py-0 flex-col sm:flex-row mt-8 sm:items-start md:gap-3 education-item relative z-10"
-        >
-        
-          <FiCircle
-            size={30}
-            color="gray"
-            className="md:inline hidden md:ml-[24vh] border bg-white/[0.25] rounded-full sm:mt-[20vh] md:mb-0 education-icon md:mt-[10.3vh]"
-          />
+      <div className="max-w-4xl mx-auto w-full">
+        {educationData.map((edu, index) => (
+          <div
+            key={index}
+            className="flex flex-col md:flex-row py-18 sm:py-10 md:py-12 relative z-10"
+          >
+            {/* Circle icon - Responsive positioning */}
+            <div className="absolute left-1 md:left-1/2 top-[5.2rem] transform -translate-x-1/2 -translate-y-1/2 z-20">
+              <FiCircle 
+                size={24}
+                className="text-gray-400 bg-white/25 rounded-full border-2 border-gray-400 p-0.5"
+              />
+            </div>
 
-         
-          <div className="flex ml-6 md:ml-0">
-            <FiCircle
-              size={25}
-              color='gray'
-              className="flex inline md:hidden mt-1 border bg-white/[0.25] rounded-full sm:mt-[20vh] md:mb-0 education-icon md:mt-[10vh]"
-            />
-            <p className="md:text-white/[0.5] ms-[2.7vh] md:ms-0 text-lg text-[2.5vh] text-white/50 md:text-2xl font-sans font-medium education-date md:mt-[10vh]">
-              {edu.date}
-            </p>
-          </div>
+            {/* Date section - Responsive alignment */}
+            <div className="w-full md:w-2/5 flex justify-start md:justify-end pr-0 md:pr-8">
+              <p className="text-white/60 text-sm sm:text-base md:text-lg font-medium ml-12 sm:ml-12 md:ml-12 lg:ml-12">
+                {edu.date}
+              </p>
+            </div>
 
-        
-          <div className="flex flex-col ml-5 sm:ml-[40vh] education-details">
-            <p className="text-neutral-50 text-sm sm:text-xl mt-2 sm:mt-[10vh] ms-[7.2vh] sm:ms-0 education-title">
-              {edu.degree}
-            </p>
-            <p className="text-sm sm:text-[2.3vh] ms-[7.2vh] md:ms-0 md:pr-24 text-white/70 sm:text-white/[0.60] education-school">
-              @{edu.school}, {edu.location}
-            </p>
+            {/* Content section - Responsive spacing */}
+            <div className="w-full md:w-3/5 pl-0 md:pl-8 mt-3 md:mt-0">
+              <p className="text-white text-base ml-12 sm:ml-12 md:ml-12 lg:ml-12 sm:text-lg md:text-xl font-medium">
+                {edu.degree}
+              </p>
+              <p className="text-white/60 text-sm sm:text-base ml-12 sm:ml-12 md:ml-12 lg:ml-12 mt-1">
+                @{edu.school}, {edu.location}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,124 +1,144 @@
 import { motion } from "framer-motion";
-import react from "/src/assets/images/react.png"
-import css from "/src/assets/images/tailwind.svg"
-import html from "/src/assets/images/html.png"
-import JV from "/src/assets/images/java.png"
-import TF from "/src/assets/images/terraform.svg"
-import OS from "/src/assets/images/oracle.png"
-import PS from "/src/assets/images/postgre.png"
-import PT from "/src/assets/images/python.png"
-import DK from "/src/assets/images/docker.png"
-import SQ from "/src/assets/images/mysql.png"
-import LX from "/src/assets/images/linux.png"
-import JS from "/src/assets/images/js.png"
-import CP from "/src/assets/images/c-.png"
-import RD from "/src/assets/images/redux.png"
-import NS from "/src/assets/images/nest.svg"
-import TS from "/src/assets/images/typescript.png"
-import AWS from "/src/assets/images/aws.png"
-import UB from "/src/assets/images/ubuntu.png"
-import PRM from "/src/assets/images/prometheus.svg"
-import BS from "/src/assets/images/bash.svg"
-import GT from "/src/assets/images/github.png"
-import COLL from "/src/assets/images/collab.png"
-import PB from "/src/assets/images/problem.png"
-import PN from "/src/assets/images/planning.png"
+import react from "/src/assets/images/react.png";
+import css from "/src/assets/images/tailwind.svg";
+import html from "/src/assets/images/html.png";
+import JV from "/src/assets/images/java.png";
+import TF from "/src/assets/images/terraform.svg";
+import OS from "/src/assets/images/oracle.png";
+import PS from "/src/assets/images/postgre.png";
+import PT from "/src/assets/images/python.png";
+import DK from "/src/assets/images/docker.png";
+import SQ from "/src/assets/images/mysql.png";
+import LX from "/src/assets/images/linux.png";
+import JS from "/src/assets/images/js.png";
+import CP from "/src/assets/images/c-.png";
+import RD from "/src/assets/images/redux.png";
+import NS from "/src/assets/images/nest.svg";
+import TS from "/src/assets/images/typescript.png";
+import AWS from "/src/assets/images/aws.png";
+import UB from "/src/assets/images/ubuntu.png";
+import PRM from "/src/assets/images/prometheus.svg";
+import BS from "/src/assets/images/bash.svg";
+import GT from "/src/assets/images/github.png";
+import COLL from "/src/assets/images/collab.png";
+import PB from "/src/assets/images/problem.png";
+import PN from "/src/assets/images/planning.png";
 
 export default function Skills() {
   return (
-    <section className="bg-radial md:min-h-[125vh] h-full transform-none px-4 md:mt-80 mt-30">
-      <section id="Skills" className="md:text-4xl text-3xl text-neutral-50 font-semibold mb-12 text-center md:pt-18 pt-10">
+    <section className="bg-radial min-h-screen h-full w-full transform-none px-4 md:px-8 lg:px-16 py-12 md:py-24">
+  
+      <motion.section 
+        id="Skills" 
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] text-neutral-50 font-semibold mb-8 md:mb-16 text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         Skills
-      </section>
-      <div className="flex flex-col items-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="absolute top-20 left-20 w-40 h-40 rounded-full opacity-10 blur-xl"
-        />
-        <motion.div
-          initial={{ y: 80, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-6">
-            
-            <SkillCard title="Programming Languages">
-              <SkillItem icon={JS} label="JavaScript" />
-              <SkillItem icon={PT} label="Python" />
-              <SkillItem icon={JV} label="Java" />
-              <SkillItem icon={CP} label="C++" />
-            </SkillCard>
+      </motion.section>
+
+    
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
+        className="absolute top-20 left-20 w-40 h-40 rounded-full"
+      />
 
       
-            <SkillCard title="FrontEnd Development">
-              <SkillItem icon={react} label="React" />
-              <SkillItem icon={html} label="HTML" />
-              <SkillItem icon={css} label="TailwindCSS" />
-              <SkillItem icon={RD} label="Redux" />
-            </SkillCard>
+      <motion.div
+        initial={{ y: 80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="max-w-7xl mx-auto"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <SkillCard title="Programming Languages">
+            <SkillItem icon={JS} label="JavaScript" />
+            <SkillItem icon={PT} label="Python" />
+            <SkillItem icon={JV} label="Java" />
+            <SkillItem icon={CP} label="C++" />
+          </SkillCard>
 
-            
-            <SkillCard title="BackEnd Development">
-              <SkillItem icon={TS} label="TypeScript" />
-              <SkillItem icon={NS} label="NestJS" />
-              <SkillItem icon={SQ} label="MySQL" />
-            </SkillCard>
+          <SkillCard title="FrontEnd Development">
+            <SkillItem icon={react} label="React" />
+            <SkillItem icon={html} label="HTML" />
+            <SkillItem icon={css} label="TailwindCSS" />
+            <SkillItem icon={RD} label="Redux" />
+          </SkillCard>
 
-            
-            <SkillCard title="Database Design">
-              <SkillItem icon={PS} label="Postgres" />
-              <SkillItem icon={SQ} label="MySQL" />
-              <SkillItem icon={OS} label="Oracle" />
-            </SkillCard>
+          <SkillCard title="BackEnd Development">
+            <SkillItem icon={TS} label="TypeScript" />
+            <SkillItem icon={NS} label="NestJS" />
+            <SkillItem icon={SQ} label="MySQL" />
+          </SkillCard>
 
-            
-            <SkillCard title="DevOps">
-              <div className="flex flex-wrap justify-center gap-6">
-                <SkillItem icon={AWS} label="AWS" />
-                <SkillItem icon={DK} label="Docker" />
-                <SkillItem icon={PRM} label="Prometheus" />
-                <SkillItem icon={UB} label="Ubuntu" />
-                <SkillItem icon={BS} label="Bash" />
-                <SkillItem icon={TF} label="Terraform" />
-                <SkillItem icon={LX} label="Linux" />
-                <SkillItem icon={GT} label="GitHub" />
-              </div>
-            </SkillCard>
+      
+          <SkillCard title="Database Design">
+            <SkillItem icon={PS} label="PostgreSQL" />
+            <SkillItem icon={SQ} label="MySQL" />
+            <SkillItem icon={OS} label="Oracle" />
+          </SkillCard>
 
-            
-            <SkillCard title="Nontechnical Skills">
-              <SkillItem icon={PN} label="Planning" />
-              <SkillItem icon={COLL} label="Collaboration"/>
-              <SkillItem icon={PB} label="Problem Solving" />
-            </SkillCard>
-          </div>
-        </motion.div>
-      </div>
+          <SkillCard title="Nontechnical Skills">
+            <SkillItem icon={PN} label="Planning" />
+            <SkillItem icon={COLL} label="Collaboration" />
+            <SkillItem icon={PB} label="Problem Solving" />
+          </SkillCard>
+
+          <SkillCard title="DevOps & Tools">
+            <div className="grid grid-cols-2 gap-4">
+              <SkillItem icon={AWS} label="AWS" />
+              <SkillItem icon={DK} label="Docker" />
+              <SkillItem icon={PRM} label="Prometheus" />
+              <SkillItem icon={UB} label="Ubuntu" />
+              <SkillItem icon={BS} label="Bash" />
+              <SkillItem icon={TF} label="Terraform" />
+              <SkillItem icon={LX} label="Linux" />
+              <SkillItem icon={GT} label="GitHub" />
+            </div>
+          </SkillCard>
+        </div>
+      </motion.div>
     </section>
   );
 }
 
-
 function SkillCard({ title, children }) {
   return (
-    <div className="w-[90vw] md:w-[60vh] bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-t border-b rounded-xl shadow-xl mt-6 font-sans mx-auto">
-      <section className="text-neutral-50 px-5 mb-5">
-        <h1 className="font-semibold text-xl text-center pt-6">{title}</h1>
-        <div className="flex justify-center flex-wrap gap-8 py-8">
+    <motion.div 
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="w-full h-full bg-[#00ff99]/[0.05] border-t border-b border-white shadow-2xl hover:bg-white/[0.08] rounded-xl shadow-lg transition-all duration-300 overflow-hidden"
+    >
+      <section className="px-4 py-6 sm:px-6 sm:py-8 h-full flex flex-col">
+        <h1 className="font-semibold text-xl sm:text-2xl text-neutral-50 text-center mb-4 sm:mb-6">
+          {title}
+        </h1>
+        <div className="flex-grow flex flex-wrap justify-center items-center gap-4 sm:gap-6">
           {children}
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
 
-function SkillItem({ icon, label, tall = false }) {
+function SkillItem({ icon, label }) {
   return (
-    <div className="flex flex-col items-center">
-      <img src={icon} alt="icon" className={`h-[${tall ? "10vh" : "6vh"}]`} />
-      <p className="text-neutral-50 text-sm mt-1 text-center">{label}</p>
-    </div>
+    <motion.div 
+      className="flex flex-col items-center p-2 sm:p-3 w-[80px] sm:w-[100px]"
+      whileHover={{ scale: 1.05 }}
+    >
+      <img 
+        src={icon} 
+        alt={label} 
+        className="h-12 sm:h-16 md:h-20 w-auto object-contain"
+      />
+      <p className="text-neutral-50 text-xs sm:text-sm md:text-base mt-2 text-center font-medium">
+        {label}
+      </p>
+    </motion.div>
   );
 }
