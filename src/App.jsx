@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import BackgroundLighting from "./components/Background";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const App = () => {
   const [isLit, setIsLit] = useState(false);

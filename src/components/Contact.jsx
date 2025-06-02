@@ -24,7 +24,7 @@ export default function Contact() {
        <div className="text-neutral-50 font-sans ">
         <section className="flex flex-col justify-center h-fit mt-18">
           <div className="flex md:flex-row flex-col items-center gap-8">
-            <a href="https://www.instagram.com/lusper_mhango" className="flex justify-center gap-2 text-md md:text-xl p-3 bg-white/15 backdrop-blur-[0.02vh] md:w-[70vh] w-full mx-4 md:mx-0 rounded-lg hover:bg-[#009966]"><FaLinkedin className="md:w-6 md:h-6 w-4 h-4 mt-1"/>Lusungu Mhango</a>
+            <a href="https://www.linkedin.com/in/lusungumhango" className="flex justify-center gap-2 text-md md:text-xl p-3 bg-white/15 backdrop-blur-[0.02vh] md:w-[70vh] w-full mx-4 md:mx-0 rounded-lg hover:bg-[#009966]"><FaLinkedin className="md:w-6 md:h-6 w-4 h-4 mt-1"/>Lusungu Mhango</a>
             <a href="https://www.mhangolusungu2003@gmail.com" className="flex justify-center gap-2 text-md md:text-xl p-3 bg-white/15 backdrop-blur-[0.02vh] md:w-[70vh] w-full rounded-lg hover:bg-[#009966] "><MdEmail className="md:w-6 md:h-6 w-4 h-4 mt-1"/>mhangolusungu2003@gmail.com</a>
           </div>
            <div className="flex md:flex-row flex-col items-center mx-auto gap-8 mt-8">
