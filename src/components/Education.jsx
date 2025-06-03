@@ -38,7 +38,7 @@ export default function Education() {
 
     
       <motion.div
-        className="absolute left-5.5 sm:left-10 md:left-9 lg:left-15 lg:top-[14vh] xl:left-[20.8vh]  md:top-[14vh] xl:top-[27vh] top-[22vh] bottom-[2rem] w-0.5 bg-gradient-to-b from-[#009966] shadow-lg z-0"
+        className="absolute left-5.5 sm:left-10 md:left-9 lg:left-15 lg:top-[14vh] xl:left-[20.8vh]  md:top-[14vh] xl:top-[27vh] top-[24.5vh] bottom-[2rem] w-0.5 bg-gradient-to-b from-[#009966] shadow-lg z-0"
         style={{ 
           height,
           transform: 'translateX(-50%)'
