@@ -5,7 +5,6 @@ import { MdEmail } from "react-icons/md";
 export default function Contact() {
   return (
     <section className="bg-radial h-screen transform-none relative flex items-center justify-center">
-      {/* Background elements remain unchanged */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -26,7 +25,6 @@ export default function Contact() {
           
           <div className="text-neutral-50 font-sans">
             <section className="flex flex-col justify-center h-fit mt-12 space-y-6 md:space-y-8">
-              {/* Row 1 */}
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 lg:gap-8">
                 <a 
                   href="https://www.linkedin.com/in/lusungumhango" 
@@ -45,7 +43,7 @@ export default function Contact() {
                 </a>
               </div>
               
-              {/* Row 2 */}
+              
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 lg:gap-8">
                 <a 
                   href="https://github.com/Lusper04/personal.git" 
@@ -66,7 +64,7 @@ export default function Contact() {
                 </a>
               </div>
               
-              {/* Row 3 */}
+            
               <div className="flex justify-center">
                 <a 
                   href="tel:0999916443" 
@@ -75,6 +73,12 @@ export default function Contact() {
                   <FaPhone className="text-lg md:text-xl"/>
                   0999916443
                 </a>
+              </div>
+              <div className="text-neutral-50 flex justify-center space-x-1 mt-12 lg:text-2xl lg:mt-20 text-lg sm:text-sm">
+               <strong className="flex-row">Iam</strong>
+                <strong className="flex-row">Open to</strong>
+                 <strong className="flex-row text-[#009966]"> FreeLancing</strong>
+                  <strong className="flex-row">Opportunities</strong>
               </div>
             </section>
           </div>

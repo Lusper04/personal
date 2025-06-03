@@ -125,7 +125,7 @@ export default function Projects() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-lg shadow-xl md:w-full max-w-lg p-7 text-neutral-50 font-sans shadow-xl border-t border-b border-white/50"
+            className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] rounded-lg shadow-xl lg:w-screen  max-w-lg p-7 text-neutral-50 font-sans shadow-2xl border-t border-b border-white"
           >
             <div>{projects[current].logo}</div>
             <h3 className="text-md font-semibold mb-2 text-center mt-4">{projects[current].title}</h3>

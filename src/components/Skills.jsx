@@ -26,11 +26,11 @@ import PN from "/src/assets/images/planning.png";
 
 export default function Skills() {
   return (
-    <section className="bg-radial min-h-screen h-full w-full transform-none px-4 md:px-8 lg:px-16 py-12 md:py-24">
+    <section className="bg-radial lg:mt-14 md:mt-14 sm:mt-14 mt-14 min-h-screen h-full w-full transform-none px-4 md:px-8 lg:px-16 py-12 md:py-24">
   
       <motion.section 
         id="Skills" 
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] text-neutral-50 font-semibold mb-8 md:mb-16 text-center"
+        className="text-3xl sm:text-4xl md:text-xl lg:text-[2rem] text-neutral-50 font-semibold mb-8 md:mb-16 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -53,7 +53,7 @@ export default function Skills() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="max-w-7xl mx-auto"
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-6">
           
           <SkillCard title="Programming Languages">
             <SkillItem icon={JS} label="JavaScript" />
@@ -82,24 +82,35 @@ export default function Skills() {
             <SkillItem icon={OS} label="Oracle" />
           </SkillCard>
 
+            <SkillCard title="DevOps & Tools">
+            <div className="md:flex md: flex-col md:items-center ">
+            <div className="grid grid-cols-2 md:flex md:flex-row gap-4">
+              <SkillItem  icon={AWS} label="AWS" />
+              <SkillItem icon={DK} label="Docker" />
+              <SkillItem icon={PRM} label="Prometheus" />
+              <SkillItem icon={UB} label="Ubuntu" />
+               <SkillItem icon={BS} label="Bash" />
+              <SkillItem icon={TF} label="Terraform" />
+              <SkillItem icon={LX} label="Linux" />
+              <SkillItem icon={GT} label="GitHub" />
+              
+            </div>
+            <div className="flex xl:flex-row xl:mt-14 hidden">
+              <SkillItem icon={BS} label="Bash" />
+              <SkillItem icon={TF} label="Terraform" />
+              <SkillItem icon={LX} label="Linux" />
+              <SkillItem icon={GT} label="GitHub" />
+            </div>
+            </div>
+          </SkillCard>
+
           <SkillCard title="Nontechnical Skills">
             <SkillItem icon={PN} label="Planning" />
             <SkillItem icon={COLL} label="Collaboration" />
             <SkillItem icon={PB} label="Problem Solving" />
           </SkillCard>
 
-          <SkillCard title="DevOps & Tools">
-            <div className="grid grid-cols-2 gap-4">
-              <SkillItem icon={AWS} label="AWS" />
-              <SkillItem icon={DK} label="Docker" />
-              <SkillItem icon={PRM} label="Prometheus" />
-              <SkillItem icon={UB} label="Ubuntu" />
-              <SkillItem icon={BS} label="Bash" />
-              <SkillItem icon={TF} label="Terraform" />
-              <SkillItem icon={LX} label="Linux" />
-              <SkillItem icon={GT} label="GitHub" />
-            </div>
-          </SkillCard>
+        
         </div>
       </motion.div>
     </section>
@@ -111,13 +122,13 @@ function SkillCard({ title, children }) {
     <motion.div 
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="w-full h-full bg-[#00ff99]/[0.05] border-t border-b border-white shadow-2xl hover:bg-white/[0.08] rounded-xl shadow-lg transition-all duration-300 overflow-hidden"
+      className="w-full h-full md:h-[40vh] bg-[#00ff99]/[0.05] border-t border-b border-white shadow-2xl hover:bg-white/[0.08] rounded-xl shadow-lg transition-all duration-300 overflow-hidden"
     >
       <section className="px-4 py-6 sm:px-6 sm:py-8 h-full flex flex-col">
         <h1 className="font-semibold text-xl sm:text-2xl text-neutral-50 text-center mb-4 sm:mb-6">
           {title}
         </h1>
-        <div className="flex-grow flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+        <div className=" md:flex-row md:mt-20 lg:mt-40 xl:mt-0 flex justify-center items-center gap-4 sm:gap-6">
           {children}
         </div>
       </section>
@@ -128,13 +139,13 @@ function SkillCard({ title, children }) {
 function SkillItem({ icon, label }) {
   return (
     <motion.div 
-      className="flex flex-col items-center p-2 sm:p-3 w-[80px] sm:w-[100px]"
+      className="flex flex-col items-center p-2 sm:p-3 w-[80px] md:w-fit md:h-[5vh] "
       whileHover={{ scale: 1.05 }}
     >
       <img 
         src={icon} 
         alt={label} 
-        className="h-12 sm:h-16 md:h-20 w-auto object-contain"
+        className="h-12 sm:h-16 md:h-10 w-auto object-contain"
       />
       <p className="text-neutral-50 text-xs sm:text-sm md:text-base mt-2 text-center font-medium">
         {label}
