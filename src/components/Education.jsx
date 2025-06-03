@@ -52,7 +52,7 @@ export default function Education() {
             className="flex flex-col relative md:flex-row py-18 sm:py-10 md:py-12 relative z-10"
           >
           
-            <div className="absolute block left-[0.7vh] md:left-3 lg:left-1 xl:left-[-22vh] top-[10vh] md:top-[4.5vh] lg:top xl:top-[8.5vh] transform -translate-x-1/2 -translate-y-1/2 z-20 ">
+            <div className="absolute block left-[0.7vh] md:left-3 lg:left-1 xl:left-[-22vh] top-[11vh] md:top-[4.5vh] lg:top xl:top-[8.5vh] transform -translate-x-1/2 -translate-y-1/2 z-20 ">
               <FiCircle 
                 size={24}
                 className="text-gray-400 bg-white/25 rounded-full border-2 border-gray-400 p-0.5"
