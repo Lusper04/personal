@@ -38,7 +38,7 @@ export default function Education() {
 
     
       <motion.div
-        className="absolute left-5.5 sm:left-10 md:left-9 lg:left-15 lg:top-[14vh] xl:left-[20.8vh]  md:top-[14vh] xl:top-[27vh] top-[28vh] bottom-[2rem] w-0.5 bg-gradient-to-b from-[#009966] shadow-lg z-0"
+        className="absolute left-5.5 sm:left-10 md:left-9 lg:left-15 lg:top-[14vh] xl:left-[20.8vh]  md:top-[14vh] xl:top-[27vh] top-[22vh] bottom-[2rem] w-0.5 bg-gradient-to-b from-[#009966] shadow-lg z-0"
         style={{ 
           height,
           transform: 'translateX(-50%)'
@@ -52,7 +52,7 @@ export default function Education() {
             className="flex flex-col relative md:flex-row py-18 sm:py-10 md:py-12 relative z-10"
           >
           
-            <div className="absolute block left-[0.7vh] md:left-3 lg:left-1 xl:left-[-22vh] top-[12.5vh] md:top-[4.5vh] lg:top xl:top-[8.5vh] transform -translate-x-1/2 -translate-y-1/2 z-20 ">
+            <div className="absolute block left-[0.7vh] md:left-3 lg:left-1 xl:left-[-22vh] top-[10vh] md:top-[4.5vh] lg:top xl:top-[8.5vh] transform -translate-x-1/2 -translate-y-1/2 z-20 ">
               <FiCircle 
                 size={24}
                 className="text-gray-400 bg-white/25 rounded-full border-2 border-gray-400 p-0.5"
