@@ -74,11 +74,11 @@ export default function Contact() {
                   0999916443
                 </a>
               </div>
-              <div className="text-neutral-50 flex justify-center space-x-1 mt-12 lg:text-2xl lg:mt-20 text-lg sm:text-sm">
+              <div className="text-neutral-50 flex justify-center space-x-1 mt-12 lg:text-2xl md:text-2xl text-2xl xl:text-2xl lg:mt-20 text-lg sm:text-sm">
                <strong className="flex-row">Iam</strong>
                 <strong className="flex-row">Open to</strong>
-                 <strong className="flex-row text-[#009966]"> FreeLancing</strong>
-                  <strong className="flex-row">Opportunities</strong>
+                 <strong className="flex-row text-[#009966]">Work</strong>
+                  
               </div>
             </section>
           </div>

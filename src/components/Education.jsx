@@ -38,11 +38,8 @@ export default function Education() {
 
     
       <motion.div
-        className="absolute left-5.5 sm:left-10 md:left-9 lg:left-15 lg:top-[14vh] xl:left-[20.8vh]  md:top-[14vh] xl:top-[27vh] top-[24.5vh] bottom-[2rem] w-0.5 bg-gradient-to-b from-[#009966] shadow-lg z-0"
-        style={{ 
-          height,
-          transform: 'translateX(-50%)'
-        }}
+        className="absolute left-6 sm:left-2 md:left-12.5 lg:left-[5vh] xl:left-[24.3vh] top-[25vh] sm:top-[12vh] md:top-[11vh] lg:top-[9vh] xl:top-[29vh] bottom-0 w-0.5 sm:w-[2px] z-0 bg-gradient-to-b  via-[#009966] shadow-lg"
+        style={{ height }}
       />
 
       <div className="max-w-4xl mx-auto w-full">
@@ -52,19 +49,25 @@ export default function Education() {
             className="flex flex-col relative md:flex-row py-18 sm:py-10 md:py-12 relative z-10"
           >
           
-            <div className="absolute block left-[0.7vh] md:left-3 lg:left-1 xl:left-[-22vh] top-[11vh] md:top-[4.5vh] lg:top xl:top-[8.5vh] transform -translate-x-1/2 -translate-y-1/2 z-20 ">
-              <FiCircle 
+            <div className="flex items-start lg:ml-[14vh]">
+              <FiCircle
                 size={24}
-                className="text-gray-400 bg-white/25 rounded-full border-2 border-gray-400 p-0.5"
+                color="gray"
+                className="hidden md:block absolute left-2 md:left-4 lg:left-14 xl:left-[-20vh] mt-[1.8vh] border bg-white/[0.25] rounded-full"
               />
+              
+              <div className="flex items-center sm:items-start">
+                <FiCircle
+                  size={20}
+                  color="gray"
+                  className="md:hidden absolute left-0 mt-[0.1rem] border bg-white/[0.25] rounded-full"
+                />
+                <p className="ml-6 sm:ml-none md:ml-12 ml-12 lg:ml-[-7vh] xl:ml-[-30vh] sm:mt-[1.5vh] text-white/50 text-base sm:text-lg md:text-xl font-sans font-medium w-[180px] md:w-[18vh]  xl:w-fit sm:w-auto">
+                  {edu.date}
+                </p>
+              </div>
             </div>
-
           
-            <div className="w-full md:w-fit flex justify-start md:justify-end pr-0 md:pr-16">
-              <p className="text-white/60 text-sm sm:text-base md:text-lg font-medium left-20 ml-12 sm:ml-12 md:ml-7 lg:ml-5 xl:ml-[-19vh]">
-                {edu.date}
-              </p>
-            </div>
 
           
             <div className="w-full md:w-3/5 pl-0 xl:ml-[12vh] mt-3 md:mt-0">
