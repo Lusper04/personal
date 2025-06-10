@@ -46,7 +46,7 @@ const App = () => {
             <Nav />
             <Hero />
             <Education />
-            <Services isLightMode={isLightMode} /> {/* Only these 3 get the mode prop */}
+            <Services isLightMode={isLightMode} /> 
             <Experiences />
             <Skills isLightMode={isLightMode} />
             <Projects />
