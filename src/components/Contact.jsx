@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Lusper from "/src/assets/images/Lusper.jpg";
+import Lusper from "/src/assets/images/lusper.jpg";
 
 export default function Contact({ isLightMode }) {
   return (
