@@ -61,7 +61,7 @@ export default function Skills({ isLightMode }) {
             <SkillItem icon={JS} label="JavaScript" isLightMode={isLightMode} />
             <SkillItem icon={PT} label="Python" isLightMode={isLightMode} />
             <SkillItem icon={JV} label="Java" isLightMode={isLightMode} />
-          <div className="h-6">
+          <div className="xl:h-6">
             <SkillItem icon={CP} label="C++" isLightMode={isLightMode} />
           </div>
           </SkillCard>
@@ -70,7 +70,7 @@ export default function Skills({ isLightMode }) {
             <SkillItem icon={react} label="React" isLightMode={isLightMode} />
             <SkillItem icon={html} label="HTML" isLightMode={isLightMode} />
             <SkillItem icon={css} label="TailwindCSS" isLightMode={isLightMode} />
-            <div className="h-6 ">
+            <div className="xl:h-6 ">
                <SkillItem icon={RD} label="Redux" isLightMode={isLightMode} />
             </div>
            
