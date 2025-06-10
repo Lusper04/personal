@@ -13,7 +13,7 @@ import SQ from "/src/assets/images/mysql.png";
 import LX from "/src/assets/images/linux.png";
 import AZ from "/src/assets/images/azure.png";
 
-export default function Services() {
+export default function Services({ isLightMode }) {
   const services = [
     {
       title: "Web Development",
@@ -46,59 +46,70 @@ export default function Services() {
   ];
 
   return (
-    <section className="bg-radial h-fit transform-none px-4 sm:px-6 lg:px-12 py-12 md:py-24 bg-white/[0.02]">
+    <section className="bg-radial h-fit transform-none px-4 sm:px-6 lg:px-12 py-12 md:py-24">
       <h2
         id="Services"
-        className="text-neutral-50 text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-center mb-12 md:mb-16"
+        className={`text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-center mb-8 md:mb-12 ${
+          isLightMode ? 'text-neutral-50' : 'text-neutral-50'
+        }`}
       >
         Services
       </h2>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5 }}
-        className="absolute top-20 left-20 w-40 h-40 rounded-full opacity-10 blur-xl"
-      />
 
       <motion.div
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-6 md:gap-12 max-w-7xl mx-auto font-sans">
+        <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6 max-w-7xl mx-auto font-sans">
           {services.map((service, index) => (
-            <motion.div
+            <ServiceCard 
               key={index}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-t border-b border-white/80 shadow-2xl rounded-2xl p-6 sm:p-8 lg:p-10 xl:p-5 transition-all duration-300 w-ful xl:w-[85vh] xl:h-[30vh] l lg:min-h-[350px] xl:h-[10vh]"
-            >
-              <div className="flex justify-center py-4 md:py-6 md:gap-4 gap-2 flex-wrap">
-                {service.icons.map((icon, iconIndex) => (
-                  <img
-                    key={iconIndex}
-                    src={icon}
-                    alt="icon"
-                    className="h-12 shadow-2xl md:h-14 border-r border-l border-white/80 p-2 bg-white/[0.09] rounded-full"
-                  />
-                ))}
-              </div>
-
-              <h3
-                className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3"
-                style={{ color: service.color }}
-              >
-                {service.title}
-              </h3>
-
-              <p className="text-neutral-50 leading-relaxed text-sm md:text-base lg:text-lg xl:text-md">
-                {service.description}
-              </p>
-            </motion.div>
+              service={service}
+              isLightMode={isLightMode}
+            />
           ))}
         </div>
       </motion.div>
     </section>
+  );
+}
+
+function ServiceCard({ service, isLightMode }) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.3 }}
+      className={`border-t border-b shadow-lg rounded-xl p-4 sm:p-5 transition-all duration-300 w-full ${
+        isLightMode
+          ? 'bg-white text-gray-700'
+          : 'bg-[#00ff99]/[0.05] hover:bg-white/[0.05] border-white/80 text-neutral-50'
+      }`}
+    >
+      <div className="flex justify-center py-2 gap-2 flex-wrap">
+        {service.icons.map((icon, iconIndex) => (
+          <img
+            key={iconIndex}
+            src={icon}
+            alt="icon"
+            className={`h-10 shadow-lg md:h-12 border-r border-l p-1 rounded-full ${
+              isLightMode
+                ? 'border-gray-300 bg-gray-100'
+                : 'border-white/80 bg-white/[0.09]'
+            }`}
+          />
+        ))}
+      </div>
+
+      <h3 className="text-lg md:text-xl font-semibold mb-2" style={{ color: service.color }}>
+        {service.title}
+      </h3>
+
+      <p className={`leading-relaxed text-sm md:text-base ${
+        isLightMode ? 'text-gray-600' : 'text-neutral-50'
+      }`}>
+        {service.description}
+      </p>
+    </motion.div>
   );
 }
