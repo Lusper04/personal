@@ -1,71 +1,152 @@
 LUSUNGU MHANGO
 
-Backend Software Engineer | Junior DevOps Engineer
+Backend Software Engineer |  DevOps Engineer
 Remote · Open to Global Opportunities
 
-📧 Email: your@email.com
+📧 Email: lusunguskillset@gmail.com
 
-🌐 Portfolio: your-portfolio-link
-💻 GitHub: github.com/your-username
-🔗 LinkedIn: linkedin.com/in/your-profile
+🌐 Portfolio: https://lusungu-mhango.vercel.app
+
+💻 GitHub: https://github.com/lusungu-skillset
+
+🔗 LinkedIn: https://www.linkedin.com/in/lusungumhango
 
 PROFILE
 
-Backend-focused software engineer with hands-on experience building Dockerized backend services, implementing secure authentication and role-based access control (RBAC), and automating CI/CD pipelines using Jenkins. Comfortable working in Linux-based environments via VMware and actively developing cloud-native applications targeting AWS and Kubernetes. Passionate about scalable systems, infrastructure automation, and production-ready software.
+Backend-focused software engineer with practical experience building production-oriented backend systems, geospatial APIs, and microservices-based platforms using NestJS and PostgreSQL/PostGIS. Strong foundation in containerization, CI/CD automation, and Linux-based development environments.
+
+Actively transitioning into cloud-native and DevOps engineering, with hands-on experience using Docker, Docker Compose, Jenkins, and ongoing work toward AWS and Kubernetes deployments. Passionate about scalable systems, infrastructure as code, and reliable backend services.
 
 TECHNICAL SKILLS
-
 Backend Development
+
 Node.js, NestJS
-RESTful API Design
-Authentication & Authorization (RBAC)
-Database Integration (Relational Databases)
+
+RESTful API design & implementation
+
+Authentication & Authorization (JWT, RBAC)
+
+Microservices architecture
+
+Database integration (PostgreSQL, MySQL)
+
+Geospatial data handling (PostGIS)
 
 DevOps & Infrastructure
-Docker & Containerization
-CI/CD Pipelines (Jenkins)
-Linux Environments (Ubuntu via VMware)
-Kubernetes (in progress)
-AWS Cloud Deployment (in progress)
+
+Docker & containerization
+
+Docker Compose (development orchestration)
+
+CI/CD pipelines (Jenkins)
+
+Linux environments (Ubuntu via VMware)
+
+Kubernetes (learning & implementation in progress)
+
+AWS cloud deployment (in progress)
 
 Tools & Platforms
+
 Git & GitHub
-Docker Compose
+
 Jenkins
-VMware
-API Testing & Debugging
+
+Docker Compose
+
+VMware Workstation
+
+Postman & cURL
+
+Google Maps API (frontend integration)
 
 PROJECTS
+EduVibe – Learning Management System (Backend)
 
-EduVibe – Dockerized Learning Platform
 Backend & DevOps Engineer
 
-• Developed and maintained backend services using Node.js and NestJS
-• Designed and implemented RESTful APIs for frontend consumption
-• Implemented secure authentication and role-based access control (RBAC)
-• Dockerized backend services for consistent development and deployment
-• Built CI/CD pipelines using Jenkins to automate builds and testing
-• Worked in Linux-based environments (Ubuntu) via VMware
-• Integrated relational databases for persistent application data
+Built a NestJS microservices-based backend for an e-learning platform
 
-Pothole Reporting System – Cloud-Native Application
-Backend & DevOps Engineer (In Progress)
+Implemented user authentication, authorization, and secure API access
 
-• Developing a backend system for geospatial pothole and road-issue reporting
-• Designing RESTful APIs for real-time data submission and retrieval
-• Containerizing backend services using Docker
-• Preparing AWS infrastructure for deployment using Kubernetes
-• Designing a scalable, cloud-native architecture suitable for production
+Designed RESTful APIs to support course recordings, video streaming, and downloads
+
+Containerized backend services using Docker
+
+Implemented CI/CD pipelines using Jenkins for automated builds and testing
+
+Used Docker Compose for local development orchestration
+
+Designed the system for future deployment on AWS using Kubernetes
+
+Applied DevOps best practices for maintainability and scalability
+
+Pothole Reporting System – Geospatial Platform
+
+Backend & Frontend Engineer
+
+Developed a NestJS backend for reporting and managing potholes using PostgreSQL + PostGIS
+
+Implemented spatial data storage and queries for accurate pothole location tracking
+
+Exposed APIs that return GeoJSON-compatible data for map visualization
+
+Enabled administrators to view exact pothole locations on Google Maps
+
+Built a Next.js frontend for reporting potholes and visualizing them on a map
+
+Containerized backend services with Docker
+
+Designed the system with cloud-native deployment (AWS + Kubernetes) in mind
+
+Automated Student Bonding System (Backend)
+
+Backend Engineer
+
+Developed a backend system for student bonding verification
+
+Implemented authentication and protected endpoints
+
+Designed APIs for verifying student bonding status
+
+Integrated relational database storage
+
+Tested endpoints using Postman and cURL
+
+Focused on backend reliability and API correctness (no frontend)
+
+Godot Racing Game
+
+Game Developer
+
+Built a 3D racing game using the Godot Game Engine
+
+Implemented vehicle physics, movement, and game mechanics
+
+Designed scenes and gameplay logic using GDScript
+
+Demonstrates versatility beyond backend development
 
 EXPERIENCE HIGHLIGHTS
 
-• Experience collaborating with frontend teams on production-style applications
-• Strong understanding of backend–infrastructure interaction
-• Focus on automation, reliability, and scalability in system design
+Hands-on experience building real-world backend systems, not toy projects
+
+Strong understanding of backend–infrastructure interaction
+
+Comfortable working in Linux-based development environments
+
+Experience collaborating with frontend components via well-defined APIs
+
+Focus on automation, scalability, and production-readiness
 
 INTERESTS
 
-• Cloud-native architecture
-• Infrastructure automation
-• DevOps best practices
-• Scalable backend systems
+Cloud-native system design
+
+DevOps & infrastructure automation
+
+Kubernetes & container orchestration
+
+Scalable backend architectures
+
+Site reliability and CI/CD best practices

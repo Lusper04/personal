@@ -93,7 +93,7 @@ export default function Hero() {
                   <FaLinkedin className="text-xl sm:text-2xl md:text-3xl" />
                 </button>
                 <button
-                  onClick={() => window.open("https://github.com/Lusper04/personal", "_blank")}
+                  onClick={() => window.open("https://github.com/lusungu-skillset", "_blank")}
                   className="rounded-lg hover:bg-[#009966] border p-1.5 sm:p-2 transition-colors"
                   aria-label="GitHub"
                 >

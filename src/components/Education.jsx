@@ -37,10 +37,7 @@ export default function Education() {
       </h2>
 
     
-      <motion.div
-        className="absolute left-6 sm:left-2 md:left-12.5 lg:left-[5vh] xl:left-[24.3vh] top-[20vh] sm:top-[12vh] md:top-[11vh] lg:top-[9vh] xl:top-[24vh] bottom-0 w-0.5 sm:w-[2px] z-0 bg-gradient-to-b  via-[#009966] shadow-lg"
-        style={{ height }}
-      />
+    
 
       <div className="max-w-4xl mx-auto w-full">
         {educationData.map((edu, index) => (
@@ -58,7 +55,7 @@ export default function Education() {
               
               <div className="flex items-center sm:items-start">
                 <FiCircle
-                  size={20}
+                  size={20}a
                   color="gray"
                   className="md:hidden absolute left-0 mt-[0.1rem] border bg-white/[0.25] rounded-full"
                 />
