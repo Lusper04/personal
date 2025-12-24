@@ -18,7 +18,7 @@ const educationData = [
   },
 ];
 
-export default function Education() {
+export default function Education({ isLightMode = false }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,7 +32,7 @@ export default function Education() {
       className="flex flex-col justify-center mt-20 md:mt-40 py-10 px-4 sm:px-6 relative"
       ref={ref}
     >
-      <h2 id="Education" className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-center mb-10 sm:mb-16">
+      <h2 id="Education" className={`${isLightMode ? 'text-gray-900' : 'text-white'} text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-center mb-10 sm:mb-16`}>
         Education
       </h2>
 
@@ -59,7 +59,7 @@ export default function Education() {
                   color="gray"
                   className="md:hidden absolute left-0 mt-[0.1rem] border bg-white/[0.25] rounded-full"
                 />
-                <p className="ml-6 sm:ml-none md:ml-12 ml-12 lg:ml-[-7vh] xl:ml-[-30vh] sm:mt-[1.5vh] text-white/50 text-base sm:text-lg md:text-xl font-sans font-medium w-[180px] md:w-[18vh]  xl:w-fit sm:w-auto">
+                <p className={`ml-6 sm:ml-none md:ml-12 ml-12 lg:ml-[-7vh] xl:ml-[-30vh] sm:mt-[1.5vh] ${isLightMode ? 'text-gray-600' : 'text-white/50'} text-base sm:text-lg md:text-xl font-sans font-medium w-[180px] md:w-[18vh]  xl:w-fit sm:w-auto`}>
                   {edu.date}
                 </p>
               </div>
@@ -68,13 +68,13 @@ export default function Education() {
 
           
             <div className="w-full md:w-3/5 pl-0 xl:ml-[12vh] mt-3 md:mt-0">
-              <p className="text-white text-base ml-12 sm:ml-12 md:ml-12 lg:ml-20 xl:ml-12 xl:ml-12 sm:text-lg md:text-xl font-medium">
+              <p className={`${isLightMode ? 'text-gray-800' : 'text-white'} text-base ml-12 sm:ml-12 md:ml-12 lg:ml-20 xl:ml-12 xl:ml-12 sm:text-lg md:text-xl font-medium`}>
                 {edu.degree}
               </p>
-              <p className="text-white/60 text-sm sm:text-base ml-12 sm:ml-12 md:ml-12 lg:ml-20 xl:ml-12 mt-1">
+              <p className={`${isLightMode ? 'text-gray-600' : 'text-white/60'} text-sm sm:text-base ml-12 sm:ml-12 md:ml-12 lg:ml-20 xl:ml-12 mt-1`}>
                 @{edu.school}, {edu.location}
               </p>
-              <p className="text-white/60 text-base ml-12 sm:ml-12 md:ml-12 lg:ml-20 xl:ml-12 sm:text-lg md:text-sm font-medium">
+              <p className={`${isLightMode ? 'text-gray-600' : 'text-white/60'} text-base ml-12 sm:ml-12 md:ml-12 lg:ml-20 xl:ml-12 sm:text-lg md:text-sm font-medium`}>
                 {edu.address}
               </p>
             </div>

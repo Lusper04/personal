@@ -55,26 +55,22 @@ const projects = [
 /* =======================
    PROJECT CARD
 ======================= */
-const ProjectCard = ({ project }) => (
+const ProjectCard = ({ project, isLightMode = false }) => (
   <div
-    className="
+    className={`
       w-full
       max-w-[360px]
       md:w-[480px]
       md:max-w-none
       min-h-[480px]
       md:min-h-[620px]
-      bg-emerald-500/5
-      border border-emerald-500/20
       rounded-2xl
       p-6 md:p-8
-      text-neutral-100
       flex flex-col justify-between
       transition-all duration-300
       hover:-translate-y-1
-      hover:border-emerald-400/40
-      hover:bg-emerald-500/10
-    "
+      ${isLightMode ? 'bg-white border border-gray-200 hover:shadow-lg' : 'bg-emerald-500/5 border border-emerald-500/20 hover:border-emerald-400/40 hover:bg-emerald-500/10'}
+    `}
   >
     {/* TOP CONTENT */}
     <div>
@@ -84,11 +80,11 @@ const ProjectCard = ({ project }) => (
         className="h-16 md:h-20 mx-auto mb-6 object-contain"
       />
 
-      <h3 className="text-lg md:text-2xl font-semibold text-center text-emerald-100 mb-4">
+      <h3 className={`text-lg md:text-2xl font-semibold text-center mb-4 ${isLightMode ? 'text-gray-900' : 'text-emerald-100'}`}>
         {project.title}
       </h3>
 
-      <p className="text-sm md:text-base text-emerald-100/70 text-center whitespace-pre-line mb-8 leading-relaxed">
+      <p className={`text-sm md:text-base text-center whitespace-pre-line mb-8 leading-relaxed ${isLightMode ? 'text-gray-600' : 'text-emerald-100/70'}`}>
         {project.subtitle}
       </p>
 
@@ -116,13 +112,7 @@ const ProjectCard = ({ project }) => (
         href={project.repo}
         target="_blank"
         rel="noopener noreferrer"
-        className="
-          p-3
-          rounded-full
-          border border-emerald-400/40
-          hover:bg-emerald-500/10
-          transition
-        "
+        className={`p-3 rounded-full transition ${isLightMode ? 'border border-gray-200 hover:bg-gray-50' : 'border border-emerald-400/40 hover:bg-emerald-500/10'}`} 
       >
         <img src={GT} className="h-8 md:h-9" />
       </a>
@@ -133,7 +123,7 @@ const ProjectCard = ({ project }) => (
 /* =======================
    MAIN COMPONENT
 ======================= */
-export default function Projects() {
+export default function Projects({ isLightMode = false }) {
   const [current, setCurrent] = useState(0);
   const prev = (current - 1 + projects.length) % projects.length;
   const next = (current + 1) % projects.length;
@@ -143,7 +133,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         <h2
           id="Projects"
-          className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-20 text-center text-emerald-100"
+          className={`text-2xl sm:text-3xl md:text-4xl font-semibold mb-20 text-center ${isLightMode ? 'text-gray-900' : 'text-emerald-100'}`}
         >
           My Recent Projects
         </h2>
@@ -159,7 +149,7 @@ export default function Projects() {
               transition={{ duration: 0.3 }}
               className="flex justify-center mb-16"
             >
-              <ProjectCard project={projects[current]} />
+              <ProjectCard project={projects[current]} isLightMode={isLightMode} />
             </motion.div>
           </AnimatePresence>
         </div>
@@ -178,7 +168,7 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.35 }}
               >
-                <ProjectCard project={projects[idx]} />
+                <ProjectCard project={projects[idx]} isLightMode={isLightMode} />
               </motion.div>
             ))}
           </AnimatePresence>

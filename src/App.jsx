@@ -50,13 +50,13 @@ const App = () => {
           className={isLightMode ? 'bg-white' : 'bg-gray-900'}
         >
           <div className={`${isLightMode ? 'bg-gray-50 text-gray-900' : 'bg-grid text-white'} min-h-screen relative z-10`}>
-            <Nav />
-            <Hero />
-            <Education />
+            <Nav isLightMode={isLightMode} />
+            <Hero isLightMode={isLightMode} />
+            <Education isLightMode={isLightMode} />
             <Services isLightMode={isLightMode} /> 
-            <Experiences />
+            <Experiences isLightMode={isLightMode} />
             <Skills isLightMode={isLightMode} />
-            <Projects />
+            <Projects isLightMode={isLightMode} />
             <Contact isLightMode={isLightMode} />
           </div>
         </motion.div>

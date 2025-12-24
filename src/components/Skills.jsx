@@ -30,9 +30,9 @@ export default function Skills({ isLightMode }) {
      
       <motion.section 
         id="Skills" 
-        className={`text-3xl sm:text-4xl md:text-xl lg:text-[2rem] font-semibold mb-8 md:mb-16 text-center 
-         text-neutral-50
-        `}
+        className={`text-3xl sm:text-4xl md:text-xl lg:text-[2rem] font-semibold mb-8 md:mb-16 text-center ${
+         isLightMode ? 'text-gray-900' : 'text-neutral-50'
+        }`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

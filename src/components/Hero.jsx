@@ -17,7 +17,7 @@ const letter = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function Hero() {
+export default function Hero({ isLightMode }) {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Hero() {
         className="text-center w-full max-w-6xl relative z-10"
       >
         <div className="flex flex-col items-center hero-section">
-          <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white whitespace-nowrap">
+          <h1 className={`text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${isLightMode ? 'text-gray-900' : 'text-white'} whitespace-nowrap`}>
             Hey there, I'm{" "}
             <motion.span
               key={animationKey}
@@ -54,10 +54,10 @@ export default function Hero() {
             </motion.span>
           </h1>
 
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-white/60 max-w-2xl mx-auto">
+          <p className={`mt-3 text-sm sm:text-base md:text-lg ${isLightMode ? 'text-gray-700' : 'text-white/60'} max-w-2xl mx-auto`}>
             Full-Stack Developer | DevOps Engineer | CyberSecurity Specialist
           </p>
-          <p className="mt-2 text-xs sm:text-sm md:text-base text-white/50 max-w-2xl mx-auto">
+          <p className={`mt-2 text-xs sm:text-sm md:text-base ${isLightMode ? 'text-gray-600' : 'text-white/50'} max-w-2xl mx-auto`}>
             Building robust, scalable solutions that drive business growth
           </p>
 
@@ -72,7 +72,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="mt-8 sm:mt-12 text-white/90">
+          <div className={`mt-8 sm:mt-12 ${isLightMode ? 'text-gray-800' : 'text-white/90'}`}>
             <label className="font-sans text-sm sm:text-base md:text-lg font-medium">
               Follow Me On:
             </label>

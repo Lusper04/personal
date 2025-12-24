@@ -23,15 +23,10 @@ export default function Contact({ isLightMode }) {
           <section 
             id="Contact" 
             className={`text-[3vh] md:text-[4vh] font-bold mt-20 ${
-              isLightMode ? 'text-neutral-50' : 'text-neutral-50'
-            }`}
-          >
+              isLightMode ? 'text-gray-900' : 'text-neutral-50'
+            }`}>
             Lets Connect
           </section>
-          <div className="flex justify-center mt-8">
-            <img src={Lusper} className="w-50 h-50 rounded-full border solid border-[#009966]" alt="lusper"/>
-          </div>
-          
           <div className={`font-sans ${isLightMode ? 'text-gray-600' : 'text-neutral-50'}`}>
             <section className="flex flex-col justify-center h-fit mt-12 space-y-6 md:space-y-8">
            
@@ -80,8 +75,8 @@ export default function Contact({ isLightMode }) {
               </div>
             
               <div className={`flex justify-center space-x-1 mt-8 mb-12 lg:text-2xl md:text-2xl text-2xl xl:text-2xl lg:mt-20 text-lg sm:text-sm ${
-                isLightMode ? 'text-neutral-50' : 'text-neutral-50'
-              }`}>
+                    isLightMode ? 'text-gray-700' : 'text-neutral-50'
+                  }`}>
                 <strong>Iam</strong>
                 <strong>Open to</strong>
                 <strong className="text-[#009966]">Work</strong>
