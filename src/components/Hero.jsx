@@ -55,7 +55,10 @@ export default function Hero() {
           </h1>
 
           <p className="mt-3 text-sm sm:text-base md:text-lg text-white/60 max-w-2xl mx-auto">
-            DevOps Engineer | CyberSecurity (Systems Analyst) | Software Engineer
+            Full-Stack Developer | DevOps Engineer | CyberSecurity Specialist
+          </p>
+          <p className="mt-2 text-xs sm:text-sm md:text-base text-white/50 max-w-2xl mx-auto">
+            Building robust, scalable solutions that drive business growth
           </p>
 
           <div className="mt-6 sm:mt-8">

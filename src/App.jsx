@@ -8,6 +8,7 @@ import Experiences from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
+import DownloadCVButton from "./components/DownloadCVButton";
 import { useState } from "react";
 
 const App = () => {
@@ -18,14 +19,18 @@ const App = () => {
   };
 
   return (
-    <div className="grid"> 
+    <div className={`grid ${isLightMode ? 'bg-white' : 'bg-gray-900'}`}> 
       <div className="fixed top-4 right-4 z-50">
         <motion.button
           onClick={toggleMode}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="p-2 rounded-full bg-gray-800 text-yellow-300"
-          aria-label="Toggle radial background mode"
+          className={`p-2 rounded-full transition-colors ${
+            isLightMode 
+              ? 'bg-gray-200 text-gray-800' 
+              : 'bg-gray-800 text-yellow-300'
+          }`}
+          aria-label="Toggle light/dark mode"
         >
           {isLightMode ? (
             <FiMoon className="w-5 h-5" />
@@ -35,14 +40,16 @@ const App = () => {
         </motion.button>
       </div>
 
+      <DownloadCVButton />
+
       <AnimatePresence mode="wait">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="bg-gray-900" 
+          className={isLightMode ? 'bg-white' : 'bg-gray-900'}
         >
-          <div className="bg-grid min-h-screen relative z-10">
+          <div className={`${isLightMode ? 'bg-gray-50 text-gray-900' : 'bg-grid text-white'} min-h-screen relative z-10`}>
             <Nav />
             <Hero />
             <Education />
